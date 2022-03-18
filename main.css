@@ -1,0 +1,48 @@
+button{
+    height: 20vh;
+    width: 30vw;
+    margin: 50px;
+    border: none;
+    border-radius: 6px;
+    justify-content: center;
+    text-align: center;
+    font: 40px;
+
+}
+
+h1, p{
+    font-family: sans-serif;
+}
+
+button:hover{
+
+}
+
+body{
+    text-align: center;
+}
+
+#pointsBox{
+    float: right;
+    margin: 40px;
+    border: 3px solid black;
+}
+#points{
+    margin: 100px;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+p, h3{
+   
+}
+
+body{
+   /*background-color: rgb(182, 197, 228); */
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-image: linear-gradient(white, rgb(18, 119, 221));
+}

@@ -1,0 +1,88 @@
+#questionContainer{
+    background-color:#fdf8e3;
+    width: 60vw;
+    height: 15vh;
+    border-radius: 8px;
+    margin: auto;
+    text-align: center;
+    font-size: 180%;
+    opacity: 90%;
+}
+#question{
+    text-align: center;
+}
+
+body{
+    background-image:url('animalCrossingBackground.jpeg') ;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-color: rgb(99, 199, 99)
+}
+#option1, #option2, #option3, #option4{
+    background-color: lightgrey;
+    width: 20vw;
+    height: 10vh;
+    margin: 30px;
+    opacity: 90%;
+    box-shadow: 0px 0px 10px 2px;
+    border-radius: 4px;
+    border: none;
+}
+
+.answers:hover{
+    color:white;
+}
+#optionA{
+    display: flex;
+}
+#optionB{
+    display: flex;
+}
+
+
+#timer{
+    float: right;
+}
+
+#score{
+    float:left;
+}
+
+h2{
+    text-align: center;
+}
+
+#optionsAll{
+    /*margin: 0% 2%;*/
+    justify-content: center;
+    display: grid;
+}
+
+#next{
+    justify-content: center;
+    text-align: center;
+}
+
+#nextQuestButton{
+    background-color: green;
+    border-radius: 4px;
+    border: none;
+    width: 5vw;
+    height: 4vh;
+    color: white;
+}
+
+#nextQuestButton:hover{
+    box-shadow: 0px 0px 10px 2px black;
+}
+
+h2, #score{
+    font-family: 'FOT-Seurat Pro B', sans-serif;
+   /* color: #a15f22;
+    color: #9e8364;*/
+}
+
+p{
+    color: #9e8364;
+    font-family: 'FOT-Seurat Pro B', sans-serif
+}

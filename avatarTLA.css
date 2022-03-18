@@ -1,0 +1,95 @@
+#questionContainer{
+    background-color:rgb(161, 150, 150);
+    width: 60vw;
+    height: 15vh;
+    border-radius: 8px;
+    margin: auto;
+    text-align: center;
+    font-size: 180%;
+    opacity: 90%;
+}
+#question{
+    text-align: center;
+}
+
+body{
+    background-image:url('braveSoldierBoy.jpeg') ;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-color: black;
+}
+#option1, #option2, #option3, #option4{
+    background-color: rgb(161, 150, 150);
+    width: 20vw;
+    height: 10vh;
+    margin: 30px;
+    opacity: 90%;
+    box-shadow: 0px 0px 10px 2px;
+    border-radius: 4px;
+    border: none;
+}
+
+.answers:hover{
+    color:white;
+}
+#optionA{
+    display: flex;
+}
+#optionB{
+    display: flex;
+}
+
+
+#timer{
+    float: right;
+}
+
+#score{
+    float:left;
+}
+
+h2{
+    text-align: center;
+}
+
+#optionsAll{
+    /*margin: 0% 2%;*/
+    justify-content: center;
+    display: grid;
+}
+
+#next{
+    justify-content: center;
+    text-align: center;
+    margin: 40px;
+}
+
+#nextQuestButton{
+    background-color: rgb(104, 4, 4);
+    border-radius: 4px;
+    border: none;
+    width: 5vw;
+    height: 4vh;
+    color: rgb(194, 142, 64);
+}
+
+#nextQuestButton:hover{
+    box-shadow: 0px 0px 10px 2px black;
+}
+
+h2, #score{
+    font-family: 'Herculanum', sans-serif;
+   /* color: #a15f22;
+    color: #9e8364;*/
+    color: rgb(194, 142, 64);
+}
+
+p{
+    color: black;
+    font-family: 'Herculanum', sans-serif
+}
+
+h2{
+    color: rgb(194, 142, 64);
+    font-size: 180%;
+}
