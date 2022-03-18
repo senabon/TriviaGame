@@ -3,9 +3,15 @@ let en = document.querySelector("#option1");
 let to = document.querySelector("#option2");
 let tre = document.querySelector("#option3");
 let fire = document.querySelector("#option4");
-let anyClicked = document.querySelector(".answers"); ///need for all buttons 
-let next = document.querySelector("#nextQuestButton")
-let answersAll = document.querySelector("#optionsAll")
+
+let firstClicked = document.querySelector(".en"); ///need for all buttons 
+let secondClicked = document.querySelector(".to");
+let thirdClicked = document.querySelector(".tre");
+let fourthClicked = document.querySelector(".fire");
+
+
+let next = document.querySelector("#nextQuestButton");
+let answersAll = document.querySelector("#optionsAll");
 
 let countdown = document.querySelector("#timer");
 let currentScore = document.querySelector("#score");
@@ -16,71 +22,75 @@ let currentQuestion = 0;
 
 
 const sporsmaler=[
-    {question:"What does Brewster sell?"},
-    {question:"Which of these cannot be grown on your island?"},
-    {question:"Where does Blathers work?"},
-    {question:"How many animal villagers are there?"},
-    {question:"What is Animal Crossing called in Japanese?"},
-    {question:"How many Animal Crossing games have been made?"},
-    {question:"what is Tom Nook?"},
-    {question:"In the first Animal Crossing, where do you start off?"},
-    {question:"Who greets you in the first game?"},
-    {question:"Which of these characters is not a Cranky villager?"}
+    "What does Brewster sell?",
+    "Which of these cannot be grown on your island?",
+    "Where does Blathers work?",
+    "How many animal villagers are there?",
+    "What is Animal Crossing called in Japanese?",
+    "How many Animal Crossing games have been made?",
+    "What is Tom Nook?",
+    "In the first Animal Crossing, where do you start off?",
+    "Who greets you in the first game?",
+    "Which of these characters is not a Cranky villager?"
 ]
 
 
 const optionEn=[
-    {answer: "Coffee", result: true},
-    {answer:"Apples", result: false},
-    {answer:"Nook's Cranny", result: false},
-    {answer:"397", result: true},
-    {answer:"Dobotsu na Mori", result: false},
-    {answer:"5", result: true},
-    {answer:"A thief", result: false},
-    {answer:"A bus", result: false},
-    {answer:"Rover", result: true},
-    {answer:"Admiral", result: false}
+    "Coffee",
+    "Apples",
+    "Nook's Cranny",
+    "397",
+    "Dobotsu na Mori",
+    "5",
+    "A thief",
+    "A bus",
+    "Rover", 
+    "Admiral", 
 ]
 
 const optionTo=[
-    {answer:"Tea",result: false},
-    {answer:"Bells",result: false},
-    {answer:"The Museum",result: true},
-    {answer:"256",result:false},
-    {answer:"Dobutsu Mori No",result: false},
-    {answer:"4",result:false},
-    {answer:"Dog",result:false},
-    {answer:"In the village",result:false},
-    {answer:"Kapp'n",result:false},
-    {answer:"Curt",result:false}
+    "Tea",
+    "Bells",
+    "The Museum",
+    "256",
+    "Dobutsu Mori No",
+    "4",
+    "Dog",
+    "In the village",
+    "Kapp'n",
+    "Curt"
 ]
 
 const optionTre=[
-    {answer:"Espresso Shots",result: false},
-    {answer:"Turnips", result: true},
-    {answer:"At the dock",result: false},
-    {answer:"150",result: false},
-    {answer:"Mori no Dobutsu",result: false},
-    {answer:"6",result: false},
-    {answer:"Bear",result: false},
-    {answer:"On a train", result: true},
-    {answer:"Isabelle",result: false},
-    {answer:"Gaston",result: false},
+    "Espresso Shots",
+    "Turnips",
+    "At the dock",
+    "150",
+    "Mori no Dobutsu",
+    "6",
+    "Bear",
+    "On a train",
+    "Isabelle",
+    "Gaston"
 ]
 
 const optionFire=[
-    {answer:"Smoothies",result: false},
-    {answer:"Pears",result: false},
-    {answer:"None of these",result: false},
-    {answer:"99",result: false},
-    {answer:"Dobutsu no Mori", result: true},
-    {answer:"3",result: false},
-    {answer:"Tanuki", result: true},
-    {answer:"In a taxi",result: false},
-    {answer:"Tom Nook",result: false},
-    {answer:"Bob", result: true}
+    "Smoothies",
+    "Pears",
+    "None of these",
+    "99",
+    "Dobutsu no Mori",
+    "3",
+    "Tanuki",
+    "In a taxi",
+    "Tom Nook",
+    "Bob"
 ]
 
+const optionEnResults=[ true, false, false, true, false, true, false, false, true, false]
+const optionToResults=[ false, false, true, false, false, false, false, false, false, false]
+const optionTreResults=[ false, true, false, false, false, false, false, true, false, false]
+const optionFireResults=[ false, false, false ,false, true, false, true, false, false, true]
     
 // anyClicked.addEventListener("click",() =>{
 //         for (let i=0; i <= questions.length-1; i++){
@@ -122,29 +132,60 @@ let index = 0;
 
 
 nextQuestion();
+buttonEn();
+buttonTo();
+buttonTre();
+buttonFire();
 
 function nextQuestion(){
     next.addEventListener('click',() =>{
         let sporsmal = sporsmaler[index];
         index = (index+1)% sporsmaler.length;
         console.log(sporsmal);
-        question.innerHMTL = sporsmal;
-    })
+        question.innerText = sporsmaler[index];
+        })
     };
-
+let i =0;
 function buttonEn(){
+    next.addEventListener('click',() =>{
+        let sporsmalEn = optionEn[i]
+        i = (i+1)% optionEn.length;
+        console.log(sporsmalEn);
+        firstClicked.innerText = optionEn[i];
+    })
+ }
 
-
-}
-
+// if(optionEn.results ===true){
+//     anyClicked.style.backgroundColor="blue";
+// }else{
+//     anyClicked.style.backgroundColor="red";
+// }
+let j =0;
 function buttonTo(){
-
+    next.addEventListener('click',() =>{
+        let sporsmalTo = optionTo[j]
+        j = (j+1)% optionTo.length;
+        console.log(sporsmalTo);
+        secondClicked.innerText = optionTo[j];
+    })
 }
 
+let k =0;
 function buttonTre(){
-
+    next.addEventListener('click',() =>{
+        let sporsmalTre = optionTre[k]
+        k = (k+1)% optionTre.length;
+        console.log(sporsmalTre);
+        thirdClicked.innerText = optionTre[k];
+    })
 }
 
+let m = 0;
 function buttonFire(){
-
+    next.addEventListener('click',() =>{
+        let sporsmalFire = optionFire[m]
+        m = (m+1)% optionFire.length;
+        console.log(sporsmalFire);
+        fourthClicked.innerText = optionFire[m];
+    })
 };

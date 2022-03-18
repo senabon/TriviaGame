@@ -15,7 +15,7 @@ h1, p{
 }
 
 button:hover{
-
+box-shadow: 0px 0px 10px 2px rgb(33, 56, 102);
 }
 
 body{
