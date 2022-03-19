@@ -27,14 +27,14 @@ const sporsmaler=[
     "Where does Blathers work?",
     "How many animal villagers are there?",
     "What is Animal Crossing called in Japanese?",
-    "How many Animal Crossing games have been made?",
+    "How many Animal Crossing games have been produced?",
     "What is Tom Nook?",
     "In the first Animal Crossing, where do you start off?",
     "Who greets you in the first game?",
     "Which of these characters is not a Cranky villager?"
 ]
 
-
+//button one array
 const optionEn=[
     "Coffee",
     "Apples",
@@ -48,6 +48,7 @@ const optionEn=[
     "Admiral", 
 ]
 
+//button two array
 const optionTo=[
     "Tea",
     "Bells",
@@ -61,6 +62,7 @@ const optionTo=[
     "Curt"
 ]
 
+//button three array
 const optionTre=[
     "Espresso Shots",
     "Turnips",
@@ -74,6 +76,7 @@ const optionTre=[
     "Gaston"
 ]
 
+//button four array
 const optionFire=[
     "Smoothies",
     "Pears",
@@ -87,32 +90,14 @@ const optionFire=[
     "Bob"
 ]
 
+//result arrays 
 const optionEnResults=[ true, false, false, true, false, true, false, false, true, false]
 const optionToResults=[ false, false, true, false, false, false, false, false, false, false]
 const optionTreResults=[ false, true, false, false, false, false, false, true, false, false]
 const optionFireResults=[ false, false, false ,false, true, false, true, false, false, true]
     
-// anyClicked.addEventListener("click",() =>{
-//         for (let i=0; i <= questions.length-1; i++){
-//             console.log(questions[i]);
-//             questionBox.innerHTML = questions[i];
-//             };
-        
-       
-//    questionCont.appendChild(questionBox);
-//     rightAnswer();  
-// }) ;
-// anyClicked.addEventListener("click",questionClick);
 
-// function questionClick(){
-//     for (let i=0; i <= questions.length-1; i++){
-//         console.log(questions[i]);
-//         questionBox.innerHTML = questions[i];
-//     };
-// }
-
-
-
+//increases the score with each correct answer
 function rightAnswer(){
     count+=2;
     currentScore.innerHTML=`Score:${count}`;
@@ -136,7 +121,10 @@ buttonEn();
 buttonTo();
 buttonTre();
 buttonFire();
+choiceOne();
 
+
+//loops throught the questions with each 'next' button click
 function nextQuestion(){
     next.addEventListener('click',() =>{
         let sporsmal = sporsmaler[index];
@@ -145,6 +133,8 @@ function nextQuestion(){
         question.innerText = sporsmaler[index];
         })
     };
+
+//loops through the array of answers for the first button wth each 'next' button click
 let i =0;
 function buttonEn(){
     next.addEventListener('click',() =>{
@@ -155,11 +145,30 @@ function buttonEn(){
     })
  }
 
-// if(optionEn.results ===true){
-//     anyClicked.style.backgroundColor="blue";
-// }else{
-//     anyClicked.style.backgroundColor="red";
-// }
+let s=0;
+en.addEventListener('click',()=>{
+    //choiceOne();
+    if(choiceOne===true){
+        alert("Correct!");
+    }else{
+        alert("Sorry,try agan!")
+}});
+
+
+//loops through results for 
+function choiceOne(){
+    next.addEventListener('click',() =>{
+        let one = optionEnResults[s]
+        s = (s+1)% optionEnResults.length;
+        console.log(one);
+        // if(one===true){
+        //     alert("Correct!")
+        // }else{
+        //     alert("Sorry,try agan!")
+    })
+ }
+
+//loops through the array of answers for the second button wth each 'next' button click
 let j =0;
 function buttonTo(){
     next.addEventListener('click',() =>{
@@ -170,6 +179,8 @@ function buttonTo(){
     })
 }
 
+
+//loops through the array of answers for the third button wth each 'next' button click
 let k =0;
 function buttonTre(){
     next.addEventListener('click',() =>{
@@ -180,6 +191,8 @@ function buttonTre(){
     })
 }
 
+
+//loops through the array of answers for the fourth button wth each 'next' button click
 let m = 0;
 function buttonFire(){
     next.addEventListener('click',() =>{
