@@ -63,7 +63,7 @@ const optionTo=[
 const optionTre=[
     "Kyoshi",
     "A Pig",
-    "A flying squirel",
+    "A flying squirrel",
     "Firebenders",
     "Jeong Jeong",
     "The Southern Water Tribe",
@@ -142,16 +142,21 @@ function buttonEn(){
  }
 
 let s=0;
-en.addEventListener('click',()=>{
-    //choiceOne();
-    if(choiceOne===true){
+en.addEventListener('click',(event)=>{
+    let text = event.target.innerText;
+    console.log(text);
+    let index = optionEn.indexOf(text);
+    console.log(index);
+    let isCorrect = optionEnResults[index]
+    console.log(isCorrect)
+    if(isCorrect===true){
         alert("Correct!");
+        rightAnswer();
     }else{
-        alert("Sorry,try agan!")
+        alert("Sorry,try again!")
 }});
 
 
-//loops through results for 
 function choiceOne(){
     next.addEventListener('click',() =>{
         let one = optionEnResults[s]
@@ -175,6 +180,19 @@ function buttonTo(){
     })
 }
 
+to.addEventListener('click',(event)=>{
+    let text = event.target.innerText;
+    console.log(text);
+    let index = optionTo.indexOf(text);
+    console.log(index);
+    let isCorrect = optionToResults[index]
+    console.log(isCorrect)
+    if(isCorrect===true){
+        alert("Correct!");
+        rightAnswer();
+    }else{
+        alert("Sorry,try again!")
+}});
 
 //loops through the array of answers for the third button wth each 'next' button click
 let k =0;
@@ -187,6 +205,20 @@ function buttonTre(){
     })
 }
 
+tre.addEventListener('click',(event)=>{
+    let text = event.target.innerText;
+    console.log(text);
+    let index = optionTre.indexOf(text);
+    console.log(index);
+    let isCorrect = optionTreResults[index]
+    console.log(isCorrect)
+    if(isCorrect===true){
+        alert("Correct!");
+        rightAnswer();
+    }else{
+        alert("Sorry,try again!")
+}});
+
 
 //loops through the array of answers for the fourth button wth each 'next' button click
 let m = 0;
@@ -198,3 +230,17 @@ function buttonFire(){
         fourthClicked.innerText = optionFire[m];
     })
 };
+
+fire.addEventListener('click',(event)=>{
+    let text = event.target.innerText;
+    console.log(text);
+    let index = optionFire.indexOf(text);
+    console.log(index);
+    let isCorrect = optionFireResults[index]
+    console.log(isCorrect)
+    if(isCorrect===true){
+        alert("Correct!");
+        rightAnswer();
+    }else{
+        alert("Sorry,try again!")
+}});

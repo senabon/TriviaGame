@@ -286,11 +286,11 @@ function choiceFour(){
     })
 }
 
-if(index===9){
-    goHome();
-}
+// if(index===9){
+//     goHome();
+// }
 
-function goHome(){
-    goHomeButton.classList.add('home')
-    answersAll.classList.remove('optionsAll')
-}
+// function goHome(){
+//     goHomeButton.classList.add('home')
+//     answersAll.classList.remove('optionsAll')
+// }

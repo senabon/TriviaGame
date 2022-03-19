@@ -87,10 +87,10 @@ const optionFire=[
 ]
 
 //result arrays 
-const optionEnResults=[ true, false, false, true, false, true, false, false, true, false]
-const optionToResults=[ false, false, true, false, false, false, false, false, false, false]
-const optionTreResults=[ false, true, false, false, false, false, false, true, false, false]
-const optionFireResults=[ false, false, false ,false, true, false, true, false, false, true]
+const optionEnResults=[ false, false, true, true, false, false, false, false, false, false]
+const optionToResults=[ true, true, false, false, false, false, false, true, false, false]
+const optionTreResults=[ false, false, false, false, false, true, false, false, true, true]
+const optionFireResults=[ false, false, false ,false, true, false, true, false, false, false]
     
 
 //increases the score with each correct answer
@@ -151,18 +151,28 @@ en.addEventListener('click',()=>{
 }});
 
 
-//loops through results for 
+
 function choiceOne(){
     next.addEventListener('click',() =>{
         let one = optionEnResults[s]
         s = (s+1)% optionEnResults.length;
         console.log(one);
-        // if(one===true){
-        //     alert("Correct!")
-        // }else{
-        //     alert("Sorry,try agan!")
     })
  }
+
+ en.addEventListener('click',(event)=>{
+    let text = event.target.innerText;
+    console.log(text);
+    let index = optionEn.indexOf(text);
+    console.log(index);
+    let isCorrect = optionEnResults[index]
+    console.log(isCorrect)
+    if(isCorrect===true){
+        alert("Correct!");
+        rightAnswer();
+    }else{
+        alert("Sorry,try again!")
+}});
 
 //loops through the array of answers for the second button wth each 'next' button click
 let j =0;
@@ -174,6 +184,20 @@ function buttonTo(){
         secondClicked.innerText = optionTo[j];
     })
 }
+
+to.addEventListener('click',(event)=>{
+    let text = event.target.innerText;
+    console.log(text);
+    let index = optionTo.indexOf(text);
+    console.log(index);
+    let isCorrect = optionToResults[index]
+    console.log(isCorrect)
+    if(isCorrect===true){
+        alert("Correct!");
+        rightAnswer();
+    }else{
+        alert("Sorry,try again!")
+}});
 
 
 //loops through the array of answers for the third button wth each 'next' button click
@@ -187,6 +211,20 @@ function buttonTre(){
     })
 }
 
+tre.addEventListener('click',(event)=>{
+    let text = event.target.innerText;
+    console.log(text);
+    let index = optionTre.indexOf(text);
+    console.log(index);
+    let isCorrect = optionTreResults[index]
+    console.log(isCorrect)
+    if(isCorrect===true){
+        alert("Correct!");
+        rightAnswer();
+    }else{
+        alert("Sorry,try again!")
+}});
+
 
 //loops through the array of answers for the fourth button wth each 'next' button click
 let m = 0;
@@ -198,3 +236,17 @@ function buttonFire(){
         fourthClicked.innerText = optionFire[m];
     })
 };
+
+fire.addEventListener('click',(event)=>{
+    let text = event.target.innerText;
+    console.log(text);
+    let index = optionFire.indexOf(text);
+    console.log(index);
+    let isCorrect = optionFireResults[index]
+    console.log(isCorrect)
+    if(isCorrect===true){
+        alert("Correct!");
+        rightAnswer();
+    }else{
+        alert("Sorry,try again!")
+}});

@@ -91,7 +91,7 @@ button{
     border: none;
     display:none;
 }
-/* Mobile Friendly*/
+/* Mobile and Smaller Screen Friendly*/
 @media (max-width: 1200px){
     button{
         font-size: 100%;
