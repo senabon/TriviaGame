@@ -147,15 +147,24 @@ function buttonEn(){
     })
  }
 
- //checks to see whether the answer is true and creates an alert
+ //loops through results checks to see if it is true and creates an alert
 let s=0;
-en.addEventListener('click',()=>{
-    //choiceOne();
-    if(choiceOne===true){
+en.addEventListener('click',(event)=>{
+    let text = event.target.innerText;
+    console.log(text);
+    let index = optionEn.indexOf(text);
+    console.log(index);
+    let isCorrect = optionEnResults[index]
+    console.log(isCorrect)
+    if(isCorrect===true){
         alert("Correct!");
+        rightAnswer();
     }else{
         alert("Sorry,try again!")
 }});
+
+
+
 
 
 //loops through results for first button 
@@ -182,6 +191,20 @@ function buttonTo(){
     })
 }
 
+to.addEventListener('click',(event)=>{
+    let text = event.target.innerText;
+    console.log(text);
+    let index = optionTo.indexOf(text);
+    console.log(index);
+    let isCorrect = optionToResults[index]
+    console.log(isCorrect)
+    if(isCorrect===true){
+        alert("Correct!");
+        rightAnswer();
+    }else{
+        alert("Sorry,try again!")
+}});
+
 let e = 0
 function choiceTwo(){
     next.addEventListener('click',() =>{
@@ -203,6 +226,20 @@ function buttonTre(){
     })
 }
 
+tre.addEventListener('click',(event)=>{
+    let text = event.target.innerText;
+    console.log(text);
+    let index = optionTre.indexOf(text);
+    console.log(index);
+    let isCorrect = optionTreResults[index]
+    console.log(isCorrect)
+    if(isCorrect===true){
+        alert("Correct!");
+        rightAnswer();
+    }else{
+        alert("Sorry,try again!")
+}});
+
 let n = 0
 function choiceThree(){
     next.addEventListener('click',() =>{
@@ -223,6 +260,20 @@ function buttonFire(){
         fourthClicked.innerText = optionFire[m];
     })
 };
+
+fire.addEventListener('click',(event)=>{
+    let text = event.target.innerText;
+    console.log(text);
+    let index = optionFire.indexOf(text);
+    console.log(index);
+    let isCorrect = optionFireResults[index]
+    console.log(isCorrect)
+    if(isCorrect===true){
+        alert("Correct!");
+        rightAnswer();
+    }else{
+        alert("Sorry,try again!")
+}});
 
 let a = 0
 function choiceFour(){
