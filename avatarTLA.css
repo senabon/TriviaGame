@@ -93,6 +93,19 @@ button{
     font-size: 150%;
 }
 
+#home{
+    border-radius: 4px;
+    border: none;
+    position:absolute;
+    bottom: 30%;
+    right: 5%;
+}
+a{
+    text-decoration: none;
+}
+#home:hover{
+    box-shadow: 0px 0px 10px 2px white;
+}
 
 @media (max-width: 1200px){
     button{
@@ -111,4 +124,22 @@ button{
         position: absolute;
        bottom: 30%;
     }
+}
+
+@media(max-width:850px){
+    #home{
+        width: 10vw;
+        height: 3vh;
+        bottom: 40%;
+    }
+    #nextQuestButton{
+        width: 20vw;
+    }
+
+}
+
+@media(min-width:1300px){
+    #home{
+        bottom: 10%;
+}
 }

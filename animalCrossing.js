@@ -4,18 +4,14 @@ let to = document.querySelector("#option2");
 let tre = document.querySelector("#option3");
 let fire = document.querySelector("#option4");
 
-let firstClicked = document.querySelector(".en"); ///need for all buttons 
+let firstClicked = document.querySelector(".en"); 
 let secondClicked = document.querySelector(".to");
 let thirdClicked = document.querySelector(".tre");
 let fourthClicked = document.querySelector(".fire");
 
-
 let next = document.querySelector("#nextQuestButton");
-let answersAll = document.querySelector("#optionsAll");
 
 let currentScore = document.querySelector("#score");
-
-let goHomeButton = document.querySelector("#home")
 
 let count = 0;
 
@@ -104,17 +100,7 @@ function rightAnswer(){
 
 };
 
-// function correctAnswer(){
-//     if(question===true){
-//         color==="green"
-//     }else{
-//         stay same color
-//     }
-// }
-
-
 let index = 0;
-
 
 nextQuestion();
 buttonEn();
@@ -174,10 +160,6 @@ function choiceOne(){
         let one = optionEnResults[s]
         s = (s+1)% optionEnResults.length;
         console.log(one);
-        // if(one===true){
-        //     alert("Correct!")
-        // }else{
-        //     alert("Sorry,try agan!")
     })
  }
 
@@ -285,12 +267,3 @@ function choiceFour(){
 
     })
 }
-
-// if(index===9){
-//     goHome();
-// }
-
-// function goHome(){
-//     goHomeButton.classList.add('home')
-//     answersAll.classList.remove('optionsAll')
-// }

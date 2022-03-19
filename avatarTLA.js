@@ -4,20 +4,16 @@ let to = document.querySelector("#option2");
 let tre = document.querySelector("#option3");
 let fire = document.querySelector("#option4");
 
-let firstClicked = document.querySelector(".en"); ///need for all buttons 
+let firstClicked = document.querySelector(".en"); 
 let secondClicked = document.querySelector(".to");
 let thirdClicked = document.querySelector(".tre");
 let fourthClicked = document.querySelector(".fire");
 
-
 let next = document.querySelector("#nextQuestButton");
-let answersAll = document.querySelector("#optionsAll");
 
-let countdown = document.querySelector("#timer");
 let currentScore = document.querySelector("#score");
 
 let count = 0;
-let currentQuestion = 0;
 
 
 const sporsmaler =[
