@@ -1,5 +1,8 @@
 # TriviaGame
 
+This trivia game has three different categories to choose from, each based off of a different theme!
+
+Live Link: https://senabon.github.io/TriviaGame/ 
 
 # Screenshots
 
@@ -33,12 +36,22 @@ MVP Goals
 
 - As a user, I am able to go back to the home screen and choose another category.
 
-- As a user I am able to gain points for every correct answer.
+- As a user, I am able to gain points for every correct answer.
+
+- As a user I want to be able to play this game at any screen size.
 
 Stretch Goals
 
-- As a user, I would like to be able to have my score carried over to each level. 
+- Be able to carry the score over to other categories
 
-- As a user, I would like to be able to use my points.
+- Use points to upgrade to more levels/questions
 
-- As a user, I would like to have sound related to each category playing in the background. 
+- Add sound
+  
+- Add a timer
+
+# Bugs 
+
+- The user can click th correct answer multiple times to get more points
+
+- The user can select another answer after selecting another answer. 
