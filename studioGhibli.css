@@ -39,11 +39,6 @@ body{
     display: flex;
 }
 
-
-#timer{
-    float: right;
-}
-
 #score{
     float:left;
 }
@@ -91,4 +86,8 @@ p{
 h2{
     color: white;
     font-size: 180%;
+}
+
+button{
+    font-size: 150%;
 }

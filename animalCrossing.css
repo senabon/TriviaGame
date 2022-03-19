@@ -39,11 +39,6 @@ body{
     display: flex;
 }
 
-
-#timer{
-    float: right;
-}
-
 #score{
     float:left;
 }
@@ -85,4 +80,8 @@ h2, #score{
 p{
     color: #9e8364;
     font-family: 'FOT-Seurat Pro B', sans-serif
+}
+
+button{
+    font-size: 150%;
 }

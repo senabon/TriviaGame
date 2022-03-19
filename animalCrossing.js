@@ -122,7 +122,9 @@ buttonTo();
 buttonTre();
 buttonFire();
 choiceOne();
-
+choiceTwo();
+choiceThree();
+choiceFour();
 
 //loops throught the questions with each 'next' button click
 function nextQuestion(){
@@ -145,17 +147,18 @@ function buttonEn(){
     })
  }
 
+ //checks to see whether the answer is true and creates an alert
 let s=0;
 en.addEventListener('click',()=>{
     //choiceOne();
     if(choiceOne===true){
         alert("Correct!");
     }else{
-        alert("Sorry,try agan!")
+        alert("Sorry,try again!")
 }});
 
 
-//loops through results for 
+//loops through results for first button 
 function choiceOne(){
     next.addEventListener('click',() =>{
         let one = optionEnResults[s]
@@ -179,6 +182,15 @@ function buttonTo(){
     })
 }
 
+let e = 0
+function choiceTwo(){
+    next.addEventListener('click',() =>{
+        let two = optionToResults[e]
+        e = (e+1)% optionToResults.length;
+        console.log(two);
+
+    })
+}
 
 //loops through the array of answers for the third button wth each 'next' button click
 let k =0;
@@ -191,6 +203,15 @@ function buttonTre(){
     })
 }
 
+let n = 0
+function choiceThree(){
+    next.addEventListener('click',() =>{
+        let three = optionTreResults[n]
+        n = (n+1)% optionTreResults.length;
+        console.log(three);
+
+    })
+}
 
 //loops through the array of answers for the fourth button wth each 'next' button click
 let m = 0;
@@ -202,3 +223,13 @@ function buttonFire(){
         fourthClicked.innerText = optionFire[m];
     })
 };
+
+let a = 0
+function choiceFour(){
+    next.addEventListener('click',() =>{
+        let four = optionFireResults[a]
+        a = (a+1)% optionFireResults.length;
+        console.log(four);
+
+    })
+}
