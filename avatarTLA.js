@@ -91,7 +91,7 @@ const optionFireResults=[ false, false, false ,false, true, false, true, false, 
 
 //increases the score with each correct answer
 function rightAnswer(){
-    count+=2;
+    count+=5;
     currentScore.innerHTML=`Score:${count}`;
 
 };

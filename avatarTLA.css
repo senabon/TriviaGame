@@ -70,6 +70,7 @@ h2{
 
 #nextQuestButton:hover{
     box-shadow: 0px 0px 10px 2px black;
+    border: none;
 }
 
 h2, #score{
