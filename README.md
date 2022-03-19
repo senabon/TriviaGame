@@ -52,6 +52,8 @@ Stretch Goals
 
 # Bugs 
 
-- The user can click th correct answer multiple times to get more points
+- The user can click the correct answer multiple times to get more points
 
-- The user can select another answer after selecting another answer. 
+- The user can select another answer after selecting the wrong answer. 
+
+- The first question shows up at the end of the loop. 

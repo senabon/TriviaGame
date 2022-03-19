@@ -123,6 +123,10 @@ function nextQuestion(){
         index = (index+1)% sporsmaler.length;
         console.log(sporsmal);
         question.innerText = sporsmaler[index];
+        let sporsmalLoop = sporsmaler.indexOf(sporsmal);
+        if(sporsmalLoop===9){
+            alert("You've gone through all the questions! Either click 'Home' to try other categories or repeat these questions.")
+        }
         })
     };
 
