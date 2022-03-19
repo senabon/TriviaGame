@@ -92,3 +92,23 @@ h2{
 button{
     font-size: 150%;
 }
+
+
+@media (max-width: 1200px){
+    button{
+        font-size: 100%;
+    }
+}
+
+@media(max-width: 400px){
+    p, button{
+        font-size: 60%;
+    }
+    #nextQuestButton{
+        width: 10vh;
+    }
+    #score{
+        position: absolute;
+       bottom: 30%;
+    }
+}

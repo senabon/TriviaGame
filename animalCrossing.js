@@ -13,11 +13,11 @@ let fourthClicked = document.querySelector(".fire");
 let next = document.querySelector("#nextQuestButton");
 let answersAll = document.querySelector("#optionsAll");
 
-let countdown = document.querySelector("#timer");
 let currentScore = document.querySelector("#score");
 
+let goHomeButton = document.querySelector("#home")
+
 let count = 0;
-let currentQuestion = 0;
 
 
 
@@ -133,6 +133,7 @@ function nextQuestion(){
         index = (index+1)% sporsmaler.length;
         console.log(sporsmal);
         question.innerText = sporsmaler[index];
+
         })
     };
 
@@ -147,7 +148,7 @@ function buttonEn(){
     })
  }
 
- //loops through results checks to see if it is true and creates an alert
+ //gets text from button, makes it a variable, takes that variable and creates another variable  checks to see if it is true and creates an alert
 let s=0;
 en.addEventListener('click',(event)=>{
     let text = event.target.innerText;
@@ -283,4 +284,13 @@ function choiceFour(){
         console.log(four);
 
     })
+}
+
+if(index===9){
+    goHome();
+}
+
+function goHome(){
+    goHomeButton.classList.add('home')
+    answersAll.classList.remove('optionsAll')
 }
